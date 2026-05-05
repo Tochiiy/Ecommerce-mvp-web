@@ -1,4 +1,4 @@
-import getProducts from"../Data/products"
+import {getProducts} from"../Data/products"
 import {Link} from "react-router-dom"
 import ProductCart from "../components/ProductCart";
 const Home = () => {

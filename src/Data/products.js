@@ -65,7 +65,11 @@ const products = [
 ]
 
 
-export default function getProducts ()  {
+export  function getProducts ()  {
 
   return products;
+};
+
+export  function getProductById(id) {
+  return products.find((p) => p.product_id == Number(id));
 };

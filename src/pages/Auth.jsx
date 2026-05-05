@@ -1,14 +1,15 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { AuthContext } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/authContext";
+
 
 export const Auth = () => {
+  const navigate = useNavigate()
   const [mode, setMode] = useState("signup");
   const [error, setError] = useState(null); 
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const { signUp, user, logout, login } = useContext(AuthContext);
-  const navigate = useNavigate()
+  const { signUp, user, logout, login } = useAuth();
   const onSubmit = async (data) => {
     const { email, password } = data;
     setError(null); 
