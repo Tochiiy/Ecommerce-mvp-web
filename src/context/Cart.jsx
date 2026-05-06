@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, useContext } from "react";
 
 export const CartContext = createContext({
   cart: [],
@@ -9,7 +9,9 @@ export const CartContext = createContext({
   cartTotal: 0,
   cartCount: 0,
 });
-
+export const useCart = () => {
+  return useContext(CartContext);
+};
 export default function CartProvider({ children }) {
   // Initialize cart from localStorage if it exists, otherwise empty array
   const [cart, setCart] = useState(() => {

@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getProductById } from "../Data/products";
+import {useCart} from "../context/Cart"
 
 const ProductDetails = () => {
+
+
   const navigate = useNavigate();
   const { id } = useParams();
   const [product, setProduct] = useState(null);
@@ -22,7 +25,10 @@ const ProductDetails = () => {
   if (!product) {
     return <div className="page"><div className="container">Loading...</div></div>;
   }
-
+  const {addToCart, cart} = useCart();
+  const productInCart = cart.find((item) => item.product_id);
+  const productQuantityLabel = productInCart ? `${productInCart.quantity}`: "";
+  
   return (
     <div className="page">
       <div className="container">
@@ -41,8 +47,8 @@ const ProductDetails = () => {
             <p className="product-detail-description">{product.description}</p>
             
             {/* Using your button utility classes for a nice wide CTA */}
-            <button className="btn btn-primary btn-large btn-block">
-              Add to Cart
+            <button className="btn btn-primary btn-large btn-block" onClick={product.product_id}>
+              Add to Cart {productQuantityLabel}
             </button>
           </div>
           
