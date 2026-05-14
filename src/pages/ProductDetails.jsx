@@ -25,9 +25,9 @@ const ProductDetails = () => {
   if (!product) {
     return <div className="page"><div className="container">Loading...</div></div>;
   }
-  const {addToCart, cart} = useCart();
-  const productInCart = cart.find((item) => item.product_id);
-  const productQuantityLabel = productInCart ? `${productInCart.quantity}`: "";
+  const { addToCart, cart } = useCart();
+  const productInCart = cart.find((item) => item.product_id === product.product_id);
+  const productQuantityLabel = productInCart ? ` (${productInCart.quantity})` : "";
   
   return (
     <div className="page">
@@ -47,8 +47,8 @@ const ProductDetails = () => {
             <p className="product-detail-description">{product.description}</p>
             
             {/* Using your button utility classes for a nice wide CTA */}
-            <button className="btn btn-primary btn-large btn-block" onClick={product.product_id}>
-              Add to Cart {productQuantityLabel}
+            <button className="btn btn-primary btn-large btn-block" onClick={() => addToCart(product)}>
+              Add to Cart{productQuantityLabel}
             </button>
           </div>
           

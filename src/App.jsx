@@ -1,6 +1,6 @@
 import Home from "./pages/Home"
 import Auth from "./pages/Auth"
-import CheckOut from "./pages/ProductDetails"
+import CheckOut from "./pages/CheckOut"
 import { Routes, Route } from "react-router-dom"
 import NavBar from "./components/NavBar"
 import AuthProvider from "./context/authContext"

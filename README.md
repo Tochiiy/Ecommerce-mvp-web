@@ -1,46 +1,40 @@
-# 🛍️ Hubstub — General Ecommerce Store
+# 🛍️ Ecommerce MVP Web
 
-A modern, fast ecommerce web app built with React and Vite. Shop a wide range of general products with a clean and responsive UI.
+A React + Vite ecommerce storefront with product browsing, cart management, and checkout flow.
 
 ## 🚀 Live Demo
 
-🔗 [Coming Soon](#)
+This project can be hosted on Render as a static site.
 
 ## ✨ Features
 
-- 🛒 Product listing and cart management
-- 🔍 Product search and filtering
-- 📦 Checkout flow
-- 📱 Fully responsive design
-- ⚡ Fast performance with Vite
+- 🛒 Browse products and add items to cart
+- 🧾 Checkout summary with quantity controls
+- 🔐 Authentication with signup/login
+- 💾 Cart persistence using localStorage
+- ⚡ Fast Vite-powered frontend
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React, JavaScript
+- **Frontend:** React 19, JavaScript
+- **Routing:** React Router DOM
+- **Forms:** React Hook Form
+- **State:** React Context API
 - **Build Tool:** Vite
-- **Styling:** CSS
-- **State Management:** React Context API
 
 ## 📦 Getting Started
 
 ### Prerequisites
 
-- Node.js v18+
+- Node.js 18+ installed
 - npm
 
-### Installation
+### Install and Run Locally
 
 ```bash
-# Clone the repo
 git clone https://github.com/Tochiiy/Ecommerce-mvp-web.git
-
-# Navigate into the project
 cd Ecommerce-mvp-web
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 ```
 
@@ -52,20 +46,62 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 npm run build
 ```
 
+### Preview the Production Build
+
+```bash
+npm run preview
+```
+
 ## 📁 Project Structure
 
 ```
-Hubstub/
-├── public/          # Static assets, favicon
+Ecommerce-mvp-web/
+├── public/                  # Static assets and favicon
 ├── src/
-│   ├── context/     # React Context (cart, state)
-│   ├── pages/       # Page components
-│   └── main.jsx     # App entry point
+│   ├── components/          # Reusable UI components
+│   ├── context/             # Auth and cart context providers
+│   ├── Data/                # Product data utility
+│   ├── pages/               # App pages and routes
+│   ├── App.jsx              # Root app component
+│   ├── main.jsx             # React entry point
+│   └── App.css              # Global styles
 ├── index.html
 ├── package.json
-└── vite.config.js
+├── vite.config.js
+└── README.md
 ```
 
----
+## 🚀 Deploy to Render
 
-Built with ❤️ by [Tochiiy](https://github.com/Tochiiy)
+1. Go to [Render](https://render.com) and create a new **Static Site**.
+2. Connect your GitHub account and choose this repository: `Tochiiy/Ecommerce-mvp-web`.
+3. Use the branch: `development`.
+4. Set the build command to:
+
+```bash
+npm install
+npm run build
+```
+
+5. Set the publish directory to:
+
+```bash
+dist
+```
+
+6. If your app uses client-side routing, add a rewrite rule from `/` to `/index.html`.
+
+Once deployed, Render will build the React app and publish the generated `dist` folder.
+
+## 📌 Git Push Commands
+
+```bash
+git add .
+git commit -m "Update README and apply app fixes"
+git push origin development
+```
+
+## ❤️ Notes
+
+- The app is ready for static deployment.
+- If you want to use a custom domain, configure it in Render after deployment.

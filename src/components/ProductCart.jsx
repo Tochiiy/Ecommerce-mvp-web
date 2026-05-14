@@ -4,7 +4,6 @@ import { useCart } from "../context/Cart";
 const ProductCard = ({ product }) => {
   const { addToCart, cart } = useCart();
   
-  // FIX 1: Match the item's ID to the current product's ID
   const productInCart = cart.find((item) => item.product_id === product.product_id);
   const productQuantityLabel = productInCart ? ` (${productInCart.quantity})` : "";
   
@@ -16,12 +15,9 @@ const ProductCard = ({ product }) => {
         <p className="product-card-price">${product.price}</p>
         
         <div className="product-card-actions">
-          
           <Link to={`/products/${product.product_id}`} className="btn btn-secondary">
             View Details
           </Link>
-          
-          {/* FIX 2: Pass an arrow function that triggers addToCart */}
           <button className="btn btn-primary" onClick={() => addToCart(product)}>
             Add to Cart{productQuantityLabel}
           </button>
