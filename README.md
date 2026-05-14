@@ -1,16 +1,71 @@
-# React + Vite
+# 🛍️ Hubstub — General Ecommerce Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fast ecommerce web app built with React and Vite. Shop a wide range of general products with a clean and responsive UI.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 [Coming Soon](#)
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🛒 Product listing and cart management
+- 🔍 Product search and filtering
+- 📦 Checkout flow
+- 📱 Fully responsive design
+- ⚡ Fast performance with Vite
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React, JavaScript
+- **Build Tool:** Vite
+- **Styling:** CSS
+- **State Management:** React Context API
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- Node.js v18+
+- npm
+
+### Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/Tochiiy/Ecommerce-mvp-web.git
+
+# Navigate into the project
+cd Ecommerce-mvp-web
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+## 📁 Project Structure
+
+```
+Hubstub/
+├── public/          # Static assets, favicon
+├── src/
+│   ├── context/     # React Context (cart, state)
+│   ├── pages/       # Page components
+│   └── main.jsx     # App entry point
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
+Built with ❤️ by [Tochiiy](https://github.com/Tochiiy)
