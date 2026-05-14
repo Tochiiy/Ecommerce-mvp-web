@@ -70,6 +70,3 @@ Ecommerce-mvp-web/
 └── README.md
 
 ## ❤️ Notes
-
-- The app is ready for static deployment.
-- If you want to use a custom domain, configure it in Render after deployment.
