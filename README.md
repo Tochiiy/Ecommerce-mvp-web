@@ -3,8 +3,8 @@
 A React + Vite ecommerce storefront with product browsing, cart management, and checkout flow.
 
 ## 🚀 Live Demo
-
-This project can be hosted on Render as a static site.
+https://ecommerce-mvp-web-1.onrender.com/
+[This project can be hosted on Render as a static site.](https://ecommerce-mvp-web-1.onrender.com/)
 
 ## ✨ Features
 
@@ -38,7 +38,6 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ### Build for Production
 
@@ -69,37 +68,6 @@ Ecommerce-mvp-web/
 ├── package.json
 ├── vite.config.js
 └── README.md
-```
-
-## 🚀 Deploy to Render
-
-1. Go to [Render](https://render.com) and create a new **Static Site**.
-2. Connect your GitHub account and choose this repository: `Tochiiy/Ecommerce-mvp-web`.
-3. Use the branch: `development`.
-4. Set the build command to:
-
-```bash
-npm install
-npm run build
-```
-
-5. Set the publish directory to:
-
-```bash
-dist
-```
-
-6. If your app uses client-side routing, add a rewrite rule from `/` to `/index.html`.
-
-Once deployed, Render will build the React app and publish the generated `dist` folder.
-
-## 📌 Git Push Commands
-
-```bash
-git add .
-git commit -m "Update README and apply app fixes"
-git push origin development
-```
 
 ## ❤️ Notes
 
